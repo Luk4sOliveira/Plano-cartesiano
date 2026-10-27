@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Funções| Plano Cartesiano</title>
+
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="index.html">
+            <img src="Imagens/Icon House.png" alt="Home" id="menu-inicio">
+        </a>
+        <a href="pontos_retas.html">Pontos e Retas</a>
+        <a href="funcoes.html">Funções</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+
+    <!--CABEÇALHO-->
+
+    <header>
+
+        <h1>Funções no Plano Cartesiano</h1>
+        <p>Entendendo a representação de funções no plano</p>
+
+    </header>
+
+    <main>
+
+        <section id="o-que-sao-funcoes">
+
+            <!-- O QUE SÃO -->
+            <h2>
+                O que são Funções?
+            </h2>
+
+            <p>
+                Uma função é uma relação entre duas grandezas em que cada valor de x está
+                associado a um único valor de y. No Plano Cartesiano, podemos representar
+                uma função por meio de um gráfico, no qual cada ponto possui coordenadas
+                (x, y).
+            </p>
+
+            <p>
+                O valor de x é chamado de variável independente, enquanto o valor de y
+                depende de x e é chamado de variável dependente. Por isso, uma função
+                pode ser representada por y = f(x).
+            </p>
+
+            <p>
+                Uma função pode ser apresentada de diferentes formas, como por uma
+                expressão matemática, uma tabela de valores ou um gráfico. Cada tipo
+                de função possui características próprias e pode representar diferentes
+                situações.
+            </p>
+
+            <p>
+                <strong>Atenção para o ENEM:</strong>
+                observe a relação entre as grandezas, o comportamento do gráfico e os
+                valores de x e y. Funções são utilizadas para representar situações do
+                cotidiano, como preços, distâncias, crescimento e variações.
+            </p>
+
+        </section>
+
+        <!-- FUNÇÕES -->
+        <section id="funcoes">
+
+        <h2>
+            As Principais Funções
+        </h2>
+
+        <div class="blocos-funcoes">
+
+            <!-- BOTÕES -->
+            <button class="bloco-funcao" onclick="mostrarConteudo('afim')">
+                <span>Afim</span>
+            </button>
+
+            <button class="bloco-funcao" onclick="mostrarConteudo('quadratica')">
+                <span>Quadrática</span>
+            </button>
+            
+            <button class="bloco-funcao" onclick="mostrarConteudo('exponencial')">
+                <span>Exponencial</span>
+            </button>
+
+            <button class="bloco-funcao" onclick="mostrarConteudo('logaritmica')">
+                <span>Logarítmica</span>
+            </button>
+
+            </div>
+
+        <!-- CONTEÚDO -->
+            <div id="afim" class="conteudo" style="display: none;">
+
+                <h3>Função Afim</h3>
+
+                <p>
+                    A função afim é uma função que pode ser representada pela expressão
+                    f(x) = ax + b, em que a e b são números reais e a ≠ 0. Seu gráfico
+                    é representado por uma reta no Plano Cartesiano.
+                </p>
+
+                <p>
+                    O número a é chamado de coeficiente angular e indica a inclinação da
+                    reta. Quando a > 0, a função é crescente. Quando a < 0, a função é
+                    decrescente. O número b é o coeficiente linear e indica o ponto em
+                    que a reta intercepta o eixo y.
+                </p>
+
+                <p>
+                    Para encontrar a raiz da função, fazemos f(x) = 0. Esse valor representa
+                    o ponto em que a reta cruza o eixo x.
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                identifique o coeficiente angular para determinar se a função é crescente ou
+                decrescente e observe o coeficiente linear para saber onde a reta corta o eixo y.
+                </p>
+
+                <img class="imagem-acordeao" src="Imagens/função afim.jfif" alt="Mapa Mental sobre a Função Afim">
+
+            </div>
+
+            <div id="quadratica" class="conteudo" style="display: none;">
+
+                <h3>Função Quadrática</h3>
+
+                <p>
+                    A função quadrática é uma função que pode ser representada pela expressão
+                    f(x) = ax² + bx + c, em que a ≠ 0. Seu gráfico é uma parábola.
+                </p>
+
+                <p>
+                    O sinal do coeficiente a determina a concavidade da parábola. Quando a > 0,
+                    a parábola possui concavidade voltada para cima e apresenta um ponto de mínimo.
+                    Quando a < 0, a concavidade é voltada para baixo e apresenta um ponto de máximo.
+                </p>
+
+                <p>
+                    As raízes da função são os valores de x para os quais f(x) = 0. Elas correspondem
+                    aos pontos em que a parábola cruza o eixo x. A parábola também possui um vértice,
+                    que representa seu ponto de máximo ou mínimo.
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                observe a concavidade, as raízes e o vértice da parábola. Esses elementos permitem
+                compreender o comportamento da função e resolver diferentes problemas.
+                </p>
+            
+            <img class="imagem-acordeao" src="Imagens/função quadratica.jfif" alt="Mapa Mental sobre a Função Quadrática">
+
+            </div>
+
+            <div id="exponencial" class="conteudo" style="display: none;">
+
+                <h3>Função Exponencial</h3>
+
+                <p>
+                    A função exponencial é aquela em que a variável aparece no expoente.
+                    Sua forma básica é representada por f(x) = aˣ, em que a > 0 e a ≠ 1.
+                </p>
+
+                <p>
+                    O comportamento da função depende do valor da base a. Quando a > 1, a função é
+                    crescente, pois seus valores aumentam à medida que x aumenta. Quando 0 < a < 1,
+                    a função é decrescente, pois seus valores diminuem à medida que x aumenta.
+                </p>
+
+                <p>
+                    As funções exponenciais são utilizadas para representar situações em que uma
+                    grandeza cresce ou diminui de forma acelerada, como crescimento populacional,
+                    juros compostos e outros processos de crescimento ou redução.
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                observe o valor da base e o comportamento do gráfico. Em situações de crescimento
+                exponencial, a grandeza aumenta cada vez mais rapidamente.
+                </p>
+
+                <img class="imagem-acordeao" src="Imagens/Função exponencial.jfif" alt="Mapa Mental sobre a Função Exponencial">
+
+            </div>
+
+            <div id="logaritmica" class="conteudo" style="display: none;">
+
+                <h3>Função Logarítmica</h3>
+
+                <p>
+                    A função logarítmica é a função inversa da função exponencial. Ela pode ser
+                    representada pela expressão f(x) = logₐ(x), em que a > 0, a ≠ 1 e x > 0.
+                </p>
+
+                <p>
+                    O logaritmo permite descobrir qual expoente deve ser utilizado para obter
+                    determinado número. Por exemplo, log₂(8) = 3, pois 2³ = 8.
+                </p>
+
+                <p>
+                    Quando a > 1, a função logarítmica é crescente. Quando 0 < a < 1, ela é decrescente.
+                    Diferentemente de outras funções, seu domínio, nos números reais, é formado apenas
+                    pelos valores de x > 0.
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                lembre-se de que o logaritmo só existe, nos números reais, para valores positivos
+                de x. Observe também a relação entre a função logarítmica e sua função exponencial
+                correspondente.
+                </p>
+
+                <img class="imagem-acordeao" src="Imagens/Função logaritimica.jfif" alt="Mapa Mental sobre a Função Logarítimica">
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+
+        <p>
+            Projeto Plano Cartesiano
+        </p>
+
+        <p>
+            &copy; Danilo Macedo e Lukas Barbosa
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

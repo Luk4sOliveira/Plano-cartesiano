@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz | Plano Cartesiano</title>
+
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="index.html">
+            <img src="Imagens/Icon House.png" alt="Home" id="menu-inicio">
+        </a>
+        <a href="pontos_retas.html">Pontos e Retas</a>
+        <a href="funcoes.html">Funções</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+
+    <!--CABEÇALHO-->
+
+    <header>
+
+        <h1>Quiz</h1>
+        <p>Teste seus conhecimentos sobre o Plano Cartesiano</p>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2 id="progresso"></h2>
+
+            <div id="quiz-container">
+
+                <p id="pontuacao"><strong>Pontos</strong>: 0</p>
+
+                <h3 id="pergunta"></h3>
+
+                <div id="alternativas"></div>
+
+                <p id="feedback"></p>
+
+                <button id="proxima" onclick="proximaPergunta()">
+                    Próxima pergunta
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Projeto Plano Cartesiano
+        </p>
+
+        <p>
+            &copy; Danilo Macedo e Lukas Barbosa
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

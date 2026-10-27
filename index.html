@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introdução | Plano Cartesiano</title>
+
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="index.html">
+            <img id="icon-house" src="Imagens/Icon House.png" alt="Home" id="menu-inicio">
+        </a>
+        <a href="pontos_retas.html">Pontos e Retas</a>
+        <a href="funcoes.html">Funções</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+
+    <!--CABEÇALHO-->
+
+    <header>
+
+        <h1>O Plano Cartesiano</h1>
+        <p>Introdução ao Plano Cartesiano</p>
+
+    </header>
+
+    <main>
+
+        <section id="como-foi-feito">
+
+            <h2>
+                Como foi feito o Plano Cartesiano?
+            </h2>
+
+            <p>
+                O Plano Cartesiano foi criado pelo filósofo e matemático francês René Descartes,
+                no século XVII. Ele surgiu da ideia de unir a Geometria à Álgebra, permitindo representar
+                números e equações por meio de pontos e linhas. O plano é formado por dois eixos
+                perpendiculares: o eixo x (horizontal) e o eixo y (vertical), que se cruzam na origem.
+                Essa criação revolucionou a Matemática e é utilizada até hoje para representar funções,
+                gráficos e localizar pontos.
+            </p>
+
+            <p>
+                <strong>Atenção para o ENEM:</strong>
+                o Plano Cartesiano aparece bastante em questões que envolvem gráficos,
+                localização, trajetos, funções e geometria.
+            </p>
+
+        </section>
+
+        <!-- EIXO X -->
+        <section id="eixos">
+
+        <h2>
+            Os Eixos do Plano Cartesiano
+        </h2>
+
+        <article class="acordeao">
+
+            <button class="titulo-acordeao">
+                Eixo das Abscissas (X)
+                <span>+</span>
+            </button>
+
+            <div class="conteudo-acordeao">
+
+                <p>
+                    O eixo das abscissas é a linha horizontal do Plano Cartesiano e é representado
+                    pela letra x. Nele, os números positivos ficam à direita da origem e os números
+                    negativos ficam à esquerda. Esse eixo é usado para indicar a primeira coordenada
+                    de um ponto. Quando um ponto está sobre o eixo das abscissas, seu valor de y é
+                    sempre igual a zero. Por exemplo, os pontos (3,0) e (-2,0) estão sobre esse eixo.
+                </p>
+
+                <img class= "imagem-acordeao" src="Imagens/Eixo X.png" alt="Eixo das Abscissas">
+
+            </div>
+
+        </article>
+
+        <!-- EIXO Y -->
+
+        <article class="acordeao">
+
+            <button class="titulo-acordeao">
+                Eixo das Ordenadas (Y)
+                <span>+</span>
+            </button>
+
+            <div class="conteudo-acordeao">
+
+                <p>
+                    O eixo das ordenadas é a linha vertical do Plano Cartesiano e é representado pela
+                    letra y. Os números positivos ficam acima da origem e os números negativos ficam
+                    abaixo dela. Esse eixo indica a segunda coordenada de um ponto. Quando um ponto está
+                    sobre o eixo das ordenadas, seu valor de x é sempre igual a zero. Por exemplo, os
+                    pontos (0,4) e (0,-3) estão sobre esse eixo.
+                </p>
+
+                <img class= "imagem-acordeao" src="Imagens/Eixo Y.png" alt="Eixo das Ordenadas">
+
+            </div>
+
+        </article>
+
+        <!-- ORIGEM -->
+
+        <article class="acordeao">
+
+            <button class="titulo-acordeao">
+                Origem (0, 0)
+                <span>+</span>
+            </button>
+
+            <div class="conteudo-acordeao">
+
+                <p>
+                    O ponto de origem do Plano Cartesiano é o ponto
+                    onde os dois eixos, x e y, se cruzam. Ele é
+                    representado pelas coordenadas (0, 0). É a partir
+                    dele que são localizados todos os outros pontos
+                    no plano.
+                </p>
+
+                <img class= "imagem-acordeao" src="Imagens/Origem.png" alt="Origem">
+
+            </div>
+
+        </article>
+
+        </section>
+
+        <!-- QUADRANTES -->
+        <section id="quadrantes">
+
+        <h2>
+            Os Quadrantes do Plano Cartesiano
+        </h2>
+
+        <div class="blocos-quadrante">
+
+            <!-- BOTÕES -->
+                <div id="blocos-quadrante-cima">
+                <button id="quadrante-2" class="bloco-quadrante" onclick="mostrarConteudo('conteudo-quadrante-2')">
+                    <span>Quadrante 2</span>
+                </button>
+
+                <button id="quadrante-3" class="bloco-quadrante" onclick="mostrarConteudo('conteudo-quadrante-3')">
+                    <span>Quadrante 3</span>
+                </button>
+                </div>
+
+                <div id="blocos-quadrante-baixo">
+
+                <button id="quadrante-1" class="bloco-quadrante" onclick="mostrarConteudo('conteudo-quadrante-1')">
+                    <span>Quadrante 1</span>
+                </button>
+
+                <button id="quadrante-4" class="bloco-quadrante" onclick="mostrarConteudo('conteudo-quadrante-4')">
+                    <span>Quadrante 4</span>
+                </button>
+                </div>
+
+            </div>
+
+        <!-- CONTEÚDO -->
+            <div id="conteudo-quadrante-2" class="conteudo" style="display: none;">
+
+                <h3>Quadrante 2</h3>
+
+                <p>
+                    O 2º quadrante está localizado na parte superior esquerda do
+                    Plano Cartesiano. Nele, o valor de x é negativo e o valor de
+                    y é positivo. As coordenadas têm o formato (−, +).
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                Quando x é <i>negativo</i> e y é <i>positivo</i>, o ponto está no 2º quadrante.
+                </p>
+
+            </div>
+
+            <div id="conteudo-quadrante-1" class="conteudo" style="display: none;">
+
+                <h3>Quadrante 1</h3>
+
+                <p>
+                    O 1º quadrante está localizado na parte superior
+                    direita do Plano Cartesiano. Nele, os valores de x
+                    e y são positivos. Portanto, qualquer ponto nesse
+                    quadrante possui coordenadas no formato (+, +).
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                Quando x é <i>positivo</i> e y é <i>positivo</i>, o ponto está no 1º quadrante.
+                </p>
+
+            </div>
+
+            <div id="conteudo-quadrante-3" class="conteudo" style="display: none;">
+
+                <h3>Quadrante 3</h3>
+
+                <p>
+                    O 3º quadrante fica na parte inferior esquerda do Plano Cartesiano.
+                    Nesse quadrante, x e y são negativos, formando coordenadas
+                    no formato (−, −).
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                Quando x é <i>negativo</i> e y é <i>negativo</i>, o ponto está no 3º quadrante.
+                </p>
+
+            </div>
+
+            <div id="conteudo-quadrante-4" class="conteudo" style="display: none;">
+
+                <h3>Quadrante 4</h3>
+
+                <p>
+                    O 4º quadrante está localizado na parte inferior direita do Plano Cartesiano.
+                    Nele, x é positivo e y é negativo, formando coordenadas no formato (+, −).
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                Quando x é <i>positivo</i> e y é <i>negativo</i>, o ponto está no 4º quadrante.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- SIMETRIA -->
+        <section id="simetria">
+
+        <h2>
+            Simetria no Plano Cartesiano
+        </h2>
+
+        <p>A simetria no Plano Cartesiano acontece quando uma figura ou ponto é refletido em relação a
+            um eixo ou ao ponto de origem, mantendo a mesma distância do elemento de referência.
+            É como se o plano funcionasse como um espelho, criando uma imagem semelhante do outro lado.</p>
+
+        <!-- SIMETRIA X -->
+        <article class="acordeao">
+
+            <button class="titulo-acordeao">
+                Simetria na Abscissa
+                <span>+</span>
+            </button>
+
+            <div class="conteudo-acordeao">
+
+                <p>
+                    Quando um ponto é refletido em relação ao eixo X, sua coordenada x permanece igual,
+                    enquanto o sinal da coordenada y muda. Assim, um ponto (x, y) passa a ser (x, −y).
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                Quando um ponto é refletido em relação ao eixo X, sua coordenada x permanece igual, enquanto o
+                sinal da coordenada y muda. Assim, um ponto (x, y) passa a ser (x, −y).
+                </p>
+
+            </div>
+
+        </article>
+
+        <!-- SIMETRIA Y -->
+        <article class="acordeao">
+
+            <button class="titulo-acordeao">
+                Simetria na Ordenada
+                <span>+</span>
+            </button>
+
+            <div class="conteudo-acordeao">
+
+                <p>
+                    Na reflexão em relação ao eixo Y, a coordenada y permanece igual e o sinal da coordenada x muda.
+                    Dessa forma, o ponto (x, y) passa a ser (−x, y).
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                Ao refletir sobre o eixo Y, troque apenas o sinal do x.
+                </p>
+
+            </div>
+
+        </article>
+
+        <!-- SIMETRIA ORIGEM -->
+        <article class="acordeao">
+
+            <button class="titulo-acordeao">
+                Simetria na Origem
+                <span>+</span>
+            </button>
+
+            <div class="conteudo-acordeao">
+
+                <p>
+                    Quando um ponto é refletido em relação à origem (0, 0), os sinais das duas coordenadas são alterados.
+                    Portanto, o ponto (x, y) passa a ser (−x, −y).
+                </p>
+
+                <p>
+                <strong>Atenção para o ENEM:</strong>
+                Na simetria em relação à origem, troque os sinais de x e y.
+                </p>
+
+            </div>
+
+        </article>
+        </section>
+
+        <!--RESUMO-->
+        <section id="resumo-introducao">
+
+        <h2>
+            Resumo em Mapa Mental
+        </h2>
+
+        <div >
+
+            <img
+                class="imagem-resumo"
+                src="Imagens/Introdução.jpg"
+                alt="Mapa mental sobre os principais pontos do Plano Cartesiano"
+            >
+
+        </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <p>
+            Projeto Plano Cartesiano
+        </p>
+
+        <p>
+            &copy; Danilo Macedo e Lukas Barbosa
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
