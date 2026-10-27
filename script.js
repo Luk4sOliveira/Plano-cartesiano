@@ -10,30 +10,13 @@ document.querySelectorAll(".titulo-acordeao").forEach(botao => {
     });
 });
 
-//LINHA DO TEMPO
-function mostrarAno(id, botao) {
-    // Esconde todos os eventos de uma vez só
-    document.querySelectorAll(".evento").forEach(ev => ev.style.display = "none");
-    
-    // Remove a classe 'ativo' de todos os botões de anos
-    document.querySelectorAll(".anos button").forEach(btn => btn.classList.remove("ativo"));
-
-    // Mostra o evento selecionado e ativa o botão atual
-    let eventoSelecionado = document.getElementById(id);
-    eventoSelecionado.style.display = "block";
-    botao.classList.add("ativo");
-
-    // Rolar suavemente até o marco
-    eventoSelecionado.scrollIntoView({ behavior: "smooth", block: "center" });
-}
-
-//EIXO E ALIADOS
-function mostrarBlocoGuerra(id) {
+//BOTÕES
+function mostrarConteudo(id) {
     let conteudo = document.getElementById(id);
     let estavaAberto = conteudo.style.display === "block";
 
     // Fecha todos os blocos de guerra em uma linha
-    document.querySelectorAll(".conteudo-guerra").forEach(bloco => bloco.style.display = "none");
+    document.querySelectorAll(".conteudo").forEach(bloco => bloco.style.display = "none");
 
     // Só reabre se ele já não estivesse aberto antes
     if (!estavaAberto) conteudo.style.display = "block";
@@ -42,92 +25,64 @@ function mostrarBlocoGuerra(id) {
 //QUIZ (DADOS E LÓGICA)
 const perguntas = [
     {
-        "pergunta": "O que o Teorema de Pitágoras relaciona?",
-        "alternativas": [
-            "Os ângulos de qualquer triângulo",
-            "A área de um círculo",
-            "Os lados de um triângulo retângulo",
-            "Os lados de qualquer quadrilátero"
-        ],
-        "correta": 2,
-        "explicacao": "O teorema relaciona os comprimentos dos lados de um triângulo retângulo."
+        pergunta: "Qual é o nome do eixo horizontal do plano cartesiano?",
+        alternativas: ["a) Eixo das ordenadas", "b) Eixo das abscissas", "c) Origem", "d) Quadrante"],
+        correta: 1,
+        explicacao: "O eixo horizontal do plano cartesiano é o eixo das abscissas (x). O eixo vertical é o das ordenadas (y), e o ponto onde os dois se cruzam é a origem, (0, 0)."
     },
     {
-        "pergunta": "Como se chama o lado oposto ao ângulo reto?",
-        "alternativas": [
-            "Hipotenusa",
-            "Cateto maior",
-            "Cateto menor",
-            "Base"
-        ],
-        "correta": 0,
-        "explicacao": "A hipotenusa é o lado oposto ao ângulo reto e o maior lado do triângulo retângulo."
+        pergunta: "Em qual quadrante está o ponto P(−3, 4)?",
+        alternativas: ["a) 1º Quadrante", "b) 2º Quadrante", "c) 3º Quadrante", "d) 4º Quadrante"],
+        correta: 1,
+        explicacao: "No ponto P(−3, 4), x é negativo e y é positivo. Os quadrantes são numerados no sentido anti-horário:<p>1º quadrante: x > 0 e y > 0</p><p>2º quadrante: x < 0 e y > 0</p><p>3º quadrante: x < 0 e y < 0</p><p>4º quadrante: x > 0 e y < 0</p>"
     },
     {
-        "pergunta": "Qual é a fórmula do Teorema de Pitágoras?",
-        "alternativas": [
-            "a + b = c",
-            "a² + b² = c²",
-            "a² − b² = c",
-            "a · b = c²"
-        ],
-        "correta": 1,
-        "explicacao": "O quadrado da hipotenusa (c²) é igual à soma dos quadrados dos catetos (a² + b²)."
+        pergunta: "Qual é o ponto simétrico de A(3, 5) em relação ao eixo x?",
+        alternativas: ["a) (−3, 5)", "b) (−3, −5)", "c) (5, 3)", "d) (3, −5)"],
+        correta: 3,
+        explicacao: "Na simetria em relação ao eixo x, a abscissa não muda e a ordenada troca de sinal. Assim, (3, 5) vira (3, −5). Em relação ao eixo y, seria o contrário: o x trocaria de sinal."
     },
     {
-        "pergunta": "Os catetos de um triângulo retângulo medem 3 cm e 4 cm. Quanto mede a hipotenusa?",
-        "alternativas": [
-            "6 cm",
-            "7 cm",
-            "12 cm",
-            "5 cm"
-        ],
-        "correta": 3,
-        "explicacao": "3² + 4² = 9 + 16 = 25, e a raiz quadrada de 25 é 5."
+        pergunta: "Qual é a distância entre os pontos A(1, 2) e B(4, 6)?",
+        alternativas: ["a) 5", "b) 7", "c) √7", "d) 25"],
+        correta: 0,
+        explicacao: "Aplicando a fórmula da distância entre dois pontos: <p>d = √[(x₂ − x₁)² + (y₂ − y₁)²] = √[(4 − 1)² + (6 − 2)²] = √(9 + 16) = √25 = 5</p><p>Isso equivale ao Teorema de Pitágoras: a distância horizontal (3) e a vertical (4) são os catetos, e a distância entre os pontos é a hipotenusa (3² + 4² = 5²).</p>"
     },
     {
-        "pergunta": "A hipotenusa mede 13 m e um dos catetos mede 5 m. Quanto mede o outro cateto?",
-        "alternativas": [
-            "8 m",
-            "12 m",
-            "10 m",
-            "18 m"
-        ],
-        "correta": 1,
-        "explicacao": "13² − 5² = 169 − 25 = 144, e a raiz quadrada de 144 é 12."
+        pergunta: "Qual é o ponto médio do segmento com extremos A(2, 3) e B(8, 7)?",
+        alternativas: ["a) (6, 4)", "b) (10, 10)", "c) (3, 2)", "d) (5, 5)"],
+        correta: 3,
+        explicacao: "O ponto médio é a média das coordenadas dos extremos: <p>xₘ = (2 + 8) / 2 = 5</p><p>yₘ = (3 + 7) / 2 = 5</p><p>Logo, M(5, 5).</p>"
     },
     {
-        "pergunta": "Qual destas trincas de números é uma tripla pitagórica?",
-        "alternativas": [
-            "5, 12, 13",
-            "2, 3, 4",
-            "6, 7, 8",
-            "4, 5, 6"
-        ],
-        "correta": 0,
-        "explicacao": "5² + 12² = 25 + 144 = 169 = 13²."
+        pergunta: "Sobre a reta y = −2x + 5, é correto afirmar que:",
+        alternativas: ["a) É crescente e corta o eixo y no ponto (0, 5)", "b) É decrescente e corta o eixo y no ponto (0, 5)", "c) É decrescente e corta o eixo y no ponto (0, −2)", "d) É crescente e corta o eixo x no ponto (0, 5)"],
+        correta: 1,
+        explicacao: "Na equação reduzida y = mx + n: <p>O coeficiente angular é m = −2. Como é negativo, a reta é decrescente.</p><p>O coeficiente linear é n = 5. Ele indica onde a reta corta o eixo y, no ponto (0, 5).</p>"
     },
     {
-        "pergunta": "Em um triângulo retângulo, qual é sempre o maior lado?",
-        "alternativas": [
-            "Um dos catetos",
-            "Depende do triângulo",
-            "A hipotenusa",
-            "Todos têm o mesmo tamanho"
-        ],
-        "correta": 2,
-        "explicacao": "A hipotenusa é sempre maior que cada cateto, pois c² = a² + b²."
+        pergunta: "Qual é a equação reduzida da reta que passa pelos pontos (1, 3) e (3, 7)?",
+        alternativas: ["a) y = 2x + 1", "b) y = 2x + 3", "c) y = 4x − 1", "d) y = x + 2"],
+        correta: 0,
+        explicacao: "Calcule o coeficiente angular: m = (7 − 3) / (3 − 1) = 4/2 = 2.<p>Use um dos pontos, por exemplo (1, 3): y − 3 = 2(x − 1).</p><p>Desenvolva: y = 2x − 2 + 3, ou seja, y = 2x + 1.</p><p>Teste com o outro ponto: para x = 3, y = 2·3 + 1 = 7.</p><p>A interseção é (2, 5). Conferindo na outra reta: −2 + 7 = 5</p>"
     },
     {
-        "pergunta": "Uma escada de 10 m apoia-se numa parede, com o pé a 6 m dela. A que altura da parede ela chega?",
-        "alternativas": [
-            "4 m",
-            "16 m",
-            "12 m",
-            "8 m"
-        ],
-        "correta": 3,
-        "explicacao": "10² − 6² = 100 − 36 = 64, e a raiz quadrada de 64 é 8."
+        pergunta: "Qual é o ponto de interseção das retas y = 2x + 1 e y = −x + 7?",
+        alternativas: ["a) (1, 6)", "b) (3, 4)", "c) (2, 5)", "d) (2, 3)"],
+        correta: 2,
+        explicacao: "No ponto de interseção, as duas retas têm o mesmo y. Basta igualar as equações:<p>2x + 1 = −x + 7</p><p>3x = 6, logo x = 2</p><p>Substituindo: y = 2·2 + 1 = 5</p>"
+    },
+    {
+        pergunta: "Qual é o vértice da parábola de f(x) = x² − 6x + 5?",
+        alternativas: ["a) (3, −4)", "b) (−3, 4)", "c) (6, 5)", "d) (3, 5)"],
+        correta: 0,
+        explicacao: "Na função f(x) = x² − 6x + 5, temos a = 1, b = −6 e c = 5.<p>xᵥ = −b / (2a) = 6 / 2 = 3</p><p>yᵥ = f(3) = 3² − 6·3 + 5 = 9 − 18 + 5 = −4</p><p>Como a > 0, a parábola tem concavidade para cima. Por isso, o vértice (3, −4) é o ponto de mínimo da função.</p>"
+    },
+    {
+        pergunta: "O número de bactérias de uma cultura é dado por P(t) = 100 · 2^(t/3), em que t é o tempo em horas. Considerando log 2 ≈ 0,30 (logaritmo decimal), em quantas horas a cultura chegará a 1000 bactérias?",
+        alternativas: ["a) 7 horas", "b) 8 horas", "c) 9 horas", "d) 10 horas"],
+        correta: 3,
+        explicacao: "Queremos P(t) = 1000: <p>100 · 2^(t/3) = 1000</p><p>Divida por 100: 2^(t/3) = 10</p><p>Aplique log dos dois lados: (t/3) · log 2 = log 10</p><p>Como log 2 ≈ 0,30 e log 10 = 1: (t/3) · 0,30 = 1</p><p>t/3 = 1 / 0,30 ≈ 3,33</p><p>t ≈ 3,33 · 3 ≈ 10</p><p>A cultura chega a 1000 bactérias em aproximadamente 10 horas.</p>"
     }
 ];
 
@@ -162,12 +117,13 @@ function verificarResposta(indice) {
 
     if (indice === pergunta.correta) {
         botoes[indice].classList.add("correta");
-        document.getElementById("feedback").textContent = `Resposta correta! ${pergunta.explicacao}`;
+        document.getElementById("feedback").textContent = `Resposta correta!\n${pergunta.explicacao}`;
         pontos++;
+        document.getElementById("pontuacao").textContent = `Pontos: ${pontos}`;
     } else {
         botoes[indice].classList.add("errada");
         botoes[pergunta.correta].classList.add("correta");
-        document.getElementById("feedback").textContent = `Resposta incorreta. ${pergunta.explicacao}`;
+        document.getElementById("feedback").textContent = `Resposta incorreta.\n${pergunta.explicacao}`;
     }
 
     document.getElementById("proxima").style.display = "block";
@@ -192,7 +148,7 @@ function mostrarResultado() {
         <p>${msg}</p>
         <button id='refazer' onclick='refazerQuiz()'>Refazer Quiz</button>
     `;
-}
+    }
 
 function refazerQuiz() {
     perguntaAtual = 0;
